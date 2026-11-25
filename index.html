@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SunTally — know what your sun is worth</title>
+<meta name="description" content="SunTally for Sunsynk: live energy flow, battery health and — finally — what your solar actually saves you in rand and cents, on your real electricity tariff.">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0F1A; color: #EDF1F9;
+         font: 16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif;
+         overflow-x: hidden; }
+  .aurora { position: fixed; inset: -20%; z-index: 0; pointer-events: none;
+            background:
+              radial-gradient(40% 40% at 22% 10%, rgba(255,178,49,.13), transparent 70%),
+              radial-gradient(45% 45% at 85% 80%, rgba(45,212,160,.09), transparent 70%),
+              radial-gradient(35% 35% at 75% 25%, rgba(94,162,255,.07), transparent 70%); }
+  main { position: relative; z-index: 1; max-width: 880px; margin: 0 auto;
+         padding: 56px 24px 90px; }
+  .mark { display: flex; align-items: center; gap: 14px; margin-bottom: 52px; }
+  .tile { width: 52px; height: 52px; border-radius: 14px; position: relative;
+          background: radial-gradient(circle at 38% 38%, #1B2740, #0B0F1A);
+          border: 1px solid #2C3754; }
+  .tile i { position: absolute; border-radius: 99px; }
+  .tile .sun  { width: 15px; height: 15px; left: 10px; top: 16px;
+                background: linear-gradient(#FFD27A, #F08A1E);
+                box-shadow: 0 0 10px rgba(255,178,49,.55); }
+  .tile .b1 { width: 5px; height: 9px;  left: 28px; bottom: 12px; background: rgba(237,241,249,.4); }
+  .tile .b2 { width: 5px; height: 14px; left: 35px; bottom: 12px; background: rgba(237,241,249,.65); }
+  .tile .b3 { width: 5px; height: 19px; left: 42px; bottom: 12px; background: rgba(237,241,249,.95); }
+  .mark b { font-size: 1.35rem; letter-spacing: -.02em; }
+  .mark span { color: #8C98B2; font-size: .85rem; display: block; }
+  h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.08;
+       letter-spacing: -.03em; margin: 0 0 18px; }
+  h1 em { font-style: normal; color: #FFB231; }
+  .sub { color: #B9C2D4; font-size: 1.12rem; max-width: 560px; }
+  .cta { display: inline-block; margin-top: 30px; padding: 15px 28px;
+         border-radius: 14px; background: #2DD4A0; color: #07211A;
+         font-weight: 700; text-decoration: none; }
+  .soon { color: #8C98B2; font-size: .85rem; margin-top: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 16px; margin-top: 72px; }
+  .card { background: #151B2CDD; border: 1px solid #2C3754;
+          border-radius: 18px; padding: 22px; }
+  .card h3 { margin: 0 0 8px; font-size: 1.02rem; }
+  .card h3 b { margin-right: 8px; }
+  .card p { margin: 0; color: #8C98B2; font-size: .92rem; }
+  .privacy { margin-top: 72px; border-left: 3px solid #2DD4A0;
+             padding: 4px 0 4px 18px; color: #B9C2D4; }
+  footer { margin-top: 70px; color: #5C6880; font-size: .82rem; line-height: 1.7; }
+  footer a { color: #8C98B2; }
+</style>
+</head>
+<body>
+<div class="aurora"></div>
+<main>
+  <div class="mark">
+    <div class="tile"><i class="sun"></i><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+    <div><b>SunTally</b><span>for Sunsynk</span></div>
+  </div>
+
+  <h1>Know what your sun<br>is <em>worth</em>.</h1>
+  <p class="sub">Live energy flow, battery health and history — plus the view
+  no other app gives you: what your solar system actually saves you, in your
+  currency, on your real electricity tariff.</p>
+
+  <a class="cta" href="mailto:suntally.app@gmail.com?subject=SunTally%20early%20access">Request early access</a>
+  <div class="soon">Coming to Google Play · sign in with your existing Sunsynk account</div>
+
+  <div class="grid">
+    <div class="card"><h3><b>⚡</b>Live flow</h3>
+      <p>Your whole system on one animated screen — sun, grid, home and
+      battery, updating as you watch. Grid outages flagged the second they
+      happen.</p></div>
+    <div class="card"><h3><b>💰</b>The money view</h3>
+      <p>Incremental block tariffs, seasons and VAT handled properly. See
+      what each month cost — and what it would have cost without solar.</p></div>
+    <div class="card"><h3><b>🔋</b>Battery health</h3>
+      <p>Per-pack state of health, temperatures and cycle counts — the
+      numbers your installer checks, in your pocket.</p></div>
+    <div class="card"><h3><b>📊</b>Every day, kept</h3>
+      <p>Your history cached on your phone, browsable to any day, working
+      offline.</p></div>
+    <div class="card"><h3><b>🎛️</b>Inverter settings</h3>
+      <p>See your time-of-use programs and work mode at a glance — with safe
+      in-app editing on the roadmap.</p></div>
+    <div class="card"><h3><b>🌍</b>Anywhere</h3>
+      <p>South African municipal tariffs built in; a build-your-own tariff
+      editor for every other country and currency.</p></div>
+  </div>
+
+  <div class="privacy">
+    <b>Private by architecture.</b> SunTally runs no servers. Your Sunsynk
+    sign-in lives in your phone's secure storage, your data stays on your
+    device, and nobody — including us — sees it.
+    <a href="privacy.html" style="color:#2DD4A0">Privacy policy</a>
+  </div>
+
+  <footer>
+    © 2026 SunTally · <a href="mailto:suntally.app@gmail.com">suntally.app@gmail.com</a><br>
+    SunTally is an independent companion app and is not affiliated with or
+    endorsed by Sunsynk. Sunsynk is a trademark of its owner.
+  </footer>
+</main>
+</body>
+</html>
